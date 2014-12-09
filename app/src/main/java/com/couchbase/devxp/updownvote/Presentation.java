@@ -5,9 +5,18 @@ import com.couchbase.lite.Database;
 import com.couchbase.lite.Document;
 import com.couchbase.lite.Query;
 
+import java.util.Date;
+
 public class Presentation {
     // HINT create a property in the presentations so you can find them among the objects
     public static final String TYPE = "presentation";
+
+    private Date createdAt;
+    private int upVotes;
+    private int downVotes;
+    private String title;
+    private Document sourceDocument;
+    private Database database;
 
     // TODO Create fields for createdAt, upVotes, downVotes, title
 
@@ -31,5 +40,45 @@ public class Presentation {
         // TODO save a document to the database
         // TODO update a document if it has been saved before
         // HINT this needs a reference to the original document for revision, key, etc.
+    }
+
+    public Date getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(Date createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public int getUpVotes() {
+        return upVotes;
+    }
+
+    public void setUpVotes(int upVotes) {
+        this.upVotes = upVotes;
+    }
+
+    public int getDownVotes() {
+        return downVotes;
+    }
+
+    public void setDownVotes(int downVotes) {
+        this.downVotes = downVotes;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public Document getSourceDocument() {
+        return sourceDocument;
+    }
+
+    public void setSourceDocument(Document sourceDocument) {
+        this.sourceDocument = sourceDocument;
     }
 }
