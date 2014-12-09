@@ -12,8 +12,8 @@ public class Presentation {
     public static final String TYPE = "presentation";
 
     private Date createdAt;
-    private int upVotes;
-    private int downVotes;
+    private int upVotes = -10;
+    private int downVotes = -10;
     private String title;
     private Document sourceDocument;
     private Database database;

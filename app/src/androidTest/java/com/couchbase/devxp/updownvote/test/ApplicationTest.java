@@ -36,14 +36,14 @@ public class ApplicationTest extends ApplicationTestCase<Application> {
         assertNotNull(application.getDatabase());
     }
 
-    public void testCreatePresentation () {
+    public void testCreatePresentation () throws Exception {
         Presentation presentation = new Presentation(application.getDatabase());
+        assertNotNull(presentation.getTitle());
+        assertNotNull(presentation.getCreatedAt());
+        assertEquals(presentation.getDownVotes(), 0);
+        assertEquals(presentation.getUpVotes(), 0);
         presentation.setTitle("I am a test");
-        try {
-            presentation.save();
-        } catch (CouchbaseLiteException e) {
-            fail();
-        }
+        presentation.save();
     }
 
     public void testFindAndUpdatePresentation () {
