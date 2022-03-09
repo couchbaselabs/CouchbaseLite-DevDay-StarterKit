@@ -1,3 +1,5 @@
+⚠️ This repo is obsolete and was developed using a version of Couchbase Lite that has been end of life for years.
+
 Up Down Vote App Starter Kit
 ============================
 
